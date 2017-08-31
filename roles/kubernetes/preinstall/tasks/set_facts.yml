@@ -48,7 +48,7 @@
     etcd_authority: "127.0.0.1:2379"
 
 - set_fact:
-    etcd_endpoint: "https://{{ etcd_authority }}"
+    etcd_endpoint: "http://{{ etcd_authority }}"
 
 - set_fact:
     etcd_access_addresses: |-
