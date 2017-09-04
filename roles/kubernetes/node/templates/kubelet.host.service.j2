@@ -23,6 +23,7 @@ ExecStart={{ bin_dir }}/kubelet \
 		$DOCKER_SOCKET \
 		$KUBELET_NETWORK_PLUGIN \
 		$KUBELET_CLOUDPROVIDER
+Delegate=yes
 Restart=always
 RestartSec=10s
 
