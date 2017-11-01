@@ -20,7 +20,7 @@
 
 - name: wait for etcd up
   uri:
-    url: "{% if is_etcd_master %}https://{{ etcd_address }}{% else %}http://127.0.0.1{% endif %}:2379/health"
+    url: "https://{% if is_etcd_master %}{{ etcd_address }}{% else %}127.0.0.1{% endif %}:2379/health"
     validate_certs: no
   register: result
   until: result.status is defined and result.status == 200
