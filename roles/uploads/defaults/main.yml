@@ -1,6 +1,12 @@
 ---
 local_release_dir: /tmp
 
+# Versions
+etcd_version: v3.0.17
+calico_version: v2.5.0
+calico_cni_version: v1.10.0
+weave_version: v2.0.1
+
 # Download URL's
 etcd_download_url: "https://github.com/coreos/etcd/releases/download/{{ etcd_version }}/etcd-{{ etcd_version }}-linux-amd64.tar.gz"
 calico_cni_download_url: "https://github.com/projectcalico/calico-cni/releases/download/{{calico_cni_version}}/calico"
