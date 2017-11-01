@@ -5,6 +5,8 @@ metadata:
   namespace: {{ system_namespace }}
   labels:
     k8s-app: kube-scheduler
+  annotations:
+    kubespray.scheduler-cert/serial: "{{ scheduler_cert_serial }}"
 spec:
   hostNetwork: true
 {% if kube_version | version_compare('v1.6', '>=') %}
@@ -26,6 +28,7 @@ spec:
     - scheduler
     - --leader-elect=true
     - --kubeconfig={{ kube_config_dir }}/kube-scheduler-kubeconfig.yaml
+    - --profiling=false
     - --v={{ kube_log_level }}
 {% if kube_feature_gates %}
     - --feature-gates={{ kube_feature_gates|join(',') }}

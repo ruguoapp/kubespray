@@ -10,6 +10,7 @@ temp
 *.bak
 *.tfstate
 *.tfstate.backup
+contrib/terraform/aws/credentials.tfvars
 **/*.sw[pon]
 /ssh-bastion.conf
 **/*.sw[pon]
@@ -22,8 +23,10 @@ __pycache__/
 
 # Distribution / packaging
 .Python
+artifacts/
 env/
 build/
+credentials/
 develop-eggs/
 dist/
 downloads/

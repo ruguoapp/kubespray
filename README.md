@@ -2,7 +2,7 @@
 
 ## Deploy a production ready kubernetes cluster
 
-If you have questions, join us on the [kubernetes slack](https://slack.k8s.io), channel **#kubespray**.
+If you have questions, join us on the [kubernetes slack](https://kubernetes.slack.com), channel **#kubespray**.
 
 - Can be deployed on **AWS, GCE, Azure, OpenStack or Baremetal**
 - **High available** cluster
@@ -29,6 +29,7 @@ To deploy the cluster you can use :
 *  [Network plugins](#network-plugins)
 *  [Vagrant install](docs/vagrant.md)
 *  [CoreOS bootstrap](docs/coreos.md)
+*  [Debian Jessie setup](docs/debian.md)
 *  [Downloaded artifacts](docs/downloads.md)
 *  [Cloud providers](docs/cloud.md)
 *  [OpenStack](docs/openstack.md)
@@ -53,7 +54,7 @@ Versions of supported components
 --------------------------------
 
 
-[kubernetes](https://github.com/kubernetes/kubernetes/releases) v1.7.3 <br>
+[kubernetes](https://github.com/kubernetes/kubernetes/releases) v1.8.2 <br>
 [etcd](https://github.com/coreos/etcd/releases) v3.2.4 <br>
 [flanneld](https://github.com/coreos/flannel/releases) v0.8.0 <br>
 [calico](https://docs.projectcalico.org/v2.5/releases/) v2.5.0 <br>
@@ -72,7 +73,7 @@ plugins can be deployed for a given single cluster.
 Requirements
 --------------
 
-* **Ansible v2.3 (or newer) and python-netaddr is installed on the machine
+* **Ansible v2.4 (or newer) and python-netaddr is installed on the machine
   that will run Ansible commands**
 * **Jinja 2.9 (or newer) is required to run the Ansible Playbooks**
 * The target servers must have **access to the Internet** in order to pull docker images.
