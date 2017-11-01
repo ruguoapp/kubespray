@@ -18,7 +18,7 @@ etcd_election_timeout: "5000"
 etcd_metrics: "basic"
 
 # Limits
-# etcd_memory_limit: 512M
+etcd_memory_limit: 512M
 
 # Uncomment to set CPU share for etcd
 # etcd_cpu_limit: 300m
